@@ -16,6 +16,7 @@
 
 package com.ubiqstudio;
 
+import android.content.res.Configuration;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v4.view.GravityCompat;
@@ -56,7 +57,7 @@ public class StaticActionBarDrawerToggle implements DrawerLayout.DrawerListener 
         mToolbar.setNavigationContentDescription(mDrawerLayout.isDrawerOpen(GravityCompat.START) ? mCloseDrawerContentDescRes : mOpenDrawerContentDescRes);
     }
 
-    public void onConfigurationChanged() {
+    public void onConfigurationChanged(Configuration newConfig) {
         syncState();
     }
 
